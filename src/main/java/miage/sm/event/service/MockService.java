@@ -3,7 +3,6 @@ package miage.sm.event.service;
 import miage.sm.event.model.Product;
 import miage.sm.event.model.ProductCategory;
 import org.springframework.stereotype.Service;
-
 import java.math.BigDecimal;
 import java.util.*;
 

@@ -5,10 +5,6 @@ import lombok.*;
 
 import java.util.Set;
 
-/**
- * @author Gaëtan Bloch
- * Created on 05/05/2020
- */
 @AllArgsConstructor
 @NoArgsConstructor
 @Getter
@@ -17,9 +13,7 @@ import java.util.Set;
 public class ProductCategory {
 
     private Long id;
-
     private String categoryName;
-
     @JsonIgnore
     private Set<Product> products;
 }

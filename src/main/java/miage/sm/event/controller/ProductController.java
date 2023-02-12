@@ -8,7 +8,6 @@ import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageImpl;
 import org.springframework.data.domain.Pageable;
 import org.springframework.web.bind.annotation.*;
-
 import java.util.List;
 import java.util.stream.Collectors;
 
@@ -28,8 +27,8 @@ public class ProductController {
     public Page<Product> find(Pageable pageable) {
         List<Product> allProducts = mockService.getAllProducts();
         PagedListHolder page = new PagedListHolder(allProducts);
-        page.setPageSize(pageable.getPageSize()); // number of items per page
-        page.setPage(pageable.getPageNumber());      // set to first page
+        page.setPageSize(pageable.getPageSize());
+        page.setPage(pageable.getPageNumber());
         return new PageImpl<>(page.getPageList(), pageable, allProducts.size());
     }
 
@@ -49,7 +48,7 @@ public class ProductController {
     public Page<Product> greeting(@RequestParam(value = "name") String name, Pageable pageable) {
 
         List<Product> allProducts = mockService.getAllProducts();
-        if(name.equalsIgnoreCase("All"))
+        if (name.equalsIgnoreCase("All"))
             return new PageImpl<>(allProducts, pageable, allProducts.size());
 
         List<Product> filtredList = allProducts.stream().filter(product ->
