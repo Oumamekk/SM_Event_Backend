@@ -12,7 +12,7 @@ public class MockService {
     public List<ProductCategory> getAllCategories(){
         ProductCategory categoryAnniv = ProductCategory.builder().id(Long.parseLong("4")).categoryName("Anniversaire")
                 .build();
-        ProductCategory categoryGuestGift = ProductCategory.builder().id(Long.parseLong("3")).categoryName("Guest Gift")
+        ProductCategory categoryGuestGift = ProductCategory.builder().id(Long.parseLong("3")).categoryName("Cadeaux invités")
                 .build();
         ProductCategory categoryMariage = ProductCategory.builder().id(Long.parseLong("2")).categoryName("Mariage")
                 .build();
@@ -27,7 +27,7 @@ public class MockService {
                 .build();
         Product p1 = Product.builder()
                 .id(Long.parseLong("1"))
-                .name("Anniversaire décoration 1")
+                .name("Anniversaire décoration")
                 .dateCreated(new Date())
                 .unitPrice(new BigDecimal(55))
                 .active(true)
@@ -37,7 +37,7 @@ public class MockService {
                 .build();
         Product p2 = Product.builder()
                 .id(Long.parseLong("2"))
-                .name("Anniversaire décoration 2")
+                .name("Anniversaire décoration")
                 .dateCreated(new Date())
                 .unitPrice(new BigDecimal(60))
                 .active(true)
@@ -47,7 +47,7 @@ public class MockService {
                 .build();
         Product p3 = Product.builder()
                 .id(Long.parseLong("3"))
-                .name("Anniversaire décoration 3")
+                .name("Anniversaire décoration")
                 .dateCreated(new Date())
                 .unitPrice(new BigDecimal(43))
                 .active(true)
@@ -57,7 +57,7 @@ public class MockService {
                 .build();
         Product p4 = Product.builder()
                 .id(Long.parseLong("4"))
-                .name("Anniversaire décoration 4")
+                .name("Anniversaire décoration")
                 .dateCreated(new Date())
                 .unitPrice(new BigDecimal(54))
                 .active(true)
@@ -67,7 +67,7 @@ public class MockService {
                 .build();
         Product p5 = Product.builder()
                 .id(Long.parseLong("5"))
-                .name("Anniversaire décoration 5")
+                .name("Anniversaire décoration")
                 .dateCreated(new Date())
                 .unitPrice(new BigDecimal(55))
                 .active(true)
@@ -77,7 +77,7 @@ public class MockService {
                 .build();
         Product p6 = Product.builder()
                 .id(Long.parseLong("6"))
-                .name("Anniversaire décoration 6")
+                .name("Anniversaire décoration")
                 .dateCreated(new Date())
                 .unitPrice(new BigDecimal(55))
                 .active(true)
@@ -87,7 +87,7 @@ public class MockService {
                 .build();
         Product p7 = Product.builder()
                 .id(Long.parseLong("7"))
-                .name("Anniversaire décoration 7")
+                .name("Anniversaire décoration")
                 .dateCreated(new Date())
                 .unitPrice(new BigDecimal(55))
                 .active(true)
@@ -97,7 +97,7 @@ public class MockService {
                 .build();
         Product p8 = Product.builder()
                 .id(Long.parseLong("8"))
-                .name("Anniversaire décoration 8")
+                .name("Anniversaire décoration")
                 .dateCreated(new Date())
                 .unitPrice(new BigDecimal(55))
                 .active(true)
@@ -107,7 +107,7 @@ public class MockService {
                 .build();
         Product p9 = Product.builder()
                 .id(Long.parseLong("9"))
-                .name("Anniversaire décoration 9")
+                .name("Anniversaire décoration")
                 .dateCreated(new Date())
                 .unitPrice(new BigDecimal(55))
                 .active(true)
@@ -117,7 +117,7 @@ public class MockService {
                 .build();
         Product p10 = Product.builder()
                 .id(Long.parseLong("10"))
-                .name("Anniversaire décoration 10")
+                .name("Anniversaire décoration")
                 .dateCreated(new Date())
                 .unitPrice(new BigDecimal(55))
                 .active(true)
@@ -140,11 +140,11 @@ public class MockService {
 
     public List<Product> getAllGuestGiftProducts(){
         List<Product> products = new ArrayList<>();
-        ProductCategory categoryGuestGift = ProductCategory.builder().id(Long.parseLong("3")).categoryName("Guest Gift")
+        ProductCategory categoryGuestGift = ProductCategory.builder().id(Long.parseLong("3")).categoryName("Cadeaux invités")
                 .build();
         Product p1 = Product.builder()
                 .id(Long.parseLong("1"))
-                .name("Guest gift  1")
+                .name("Cadeaux invités")
                 .dateCreated(new Date())
                 .unitPrice(new BigDecimal(55))
                 .active(true)
@@ -154,7 +154,7 @@ public class MockService {
                 .build();
         Product p2 = Product.builder()
                 .id(Long.parseLong("2"))
-                .name("Guest gift 2")
+                .name("Cadeaux invités")
                 .dateCreated(new Date())
                 .unitPrice(new BigDecimal(60))
                 .active(true)
@@ -164,7 +164,7 @@ public class MockService {
                 .build();
         Product p3 = Product.builder()
                 .id(Long.parseLong("3"))
-                .name("Guest gift 3")
+                .name("Cadeaux invités")
                 .dateCreated(new Date())
                 .unitPrice(new BigDecimal(43))
                 .active(true)
@@ -185,7 +185,7 @@ public class MockService {
                 .build();
         Product p1 = Product.builder()
                 .id(Long.parseLong("1"))
-                .name("Mariage décoration  1")
+                .name("Mariage décoration")
                 .dateCreated(new Date())
                 .unitPrice(new BigDecimal(55))
                 .active(true)
@@ -195,7 +195,7 @@ public class MockService {
                 .build();
         Product p2 = Product.builder()
                 .id(Long.parseLong("2"))
-                .name("Mariage décoration 2")
+                .name("Mariage décoration")
                 .dateCreated(new Date())
                 .unitPrice(new BigDecimal(60))
                 .active(true)
@@ -205,7 +205,7 @@ public class MockService {
                 .build();
         Product p3 = Product.builder()
                 .id(Long.parseLong("3"))
-                .name("Mariage décoration 3")
+                .name("Mariage décoration")
                 .dateCreated(new Date())
                 .unitPrice(new BigDecimal(43))
                 .active(true)
@@ -226,7 +226,7 @@ public class MockService {
                 .build();
         Product p1 = Product.builder()
                 .id(Long.parseLong("1"))
-                .name("Demande Mariage décoration  1")
+                .name("Demande Mariage décoration")
                 .dateCreated(new Date())
                 .unitPrice(new BigDecimal(55))
                 .active(true)
@@ -236,7 +236,7 @@ public class MockService {
                 .build();
         Product p2 = Product.builder()
                 .id(Long.parseLong("2"))
-                .name("Demande Mariage décoration 2")
+                .name("Demande Mariage décoration")
                 .dateCreated(new Date())
                 .unitPrice(new BigDecimal(60))
                 .active(true)
@@ -246,7 +246,7 @@ public class MockService {
                 .build();
         Product p3 = Product.builder()
                 .id(Long.parseLong("3"))
-                .name("Demande Mariage décoration 3")
+                .name("Demande Mariage décoration")
                 .dateCreated(new Date())
                 .unitPrice(new BigDecimal(43))
                 .active(true)
