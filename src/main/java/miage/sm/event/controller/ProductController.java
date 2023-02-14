@@ -9,6 +9,7 @@ import org.springframework.data.domain.PageImpl;
 import org.springframework.data.domain.Pageable;
 import org.springframework.web.bind.annotation.*;
 import java.util.List;
+import java.util.Objects;
 import java.util.stream.Collectors;
 
 @CrossOrigin("http://localhost:4200")
@@ -20,7 +21,7 @@ public class ProductController {
 
     @GetMapping("/api/products/{id}")
     Product findOne(@PathVariable Long id) {
-        return mockService.getAllProducts().stream().filter(product -> product.getId() == id).findFirst().get();
+        return mockService.getAllProducts().stream().filter(product -> Objects.equals(product.getId(), id)).findFirst().get();
     }
 
     @GetMapping("/api/products")
@@ -52,7 +53,7 @@ public class ProductController {
             return new PageImpl<>(allProducts, pageable, allProducts.size());
 
         List<Product> filtredList = allProducts.stream().filter(product ->
-                        name.equalsIgnoreCase(product.getCategory().getCategoryName()))
+                        name.equalsIgnoreCase(product.getCategory().getCategoryName()) )
                 .collect(Collectors.toList());
         PagedListHolder page = new PagedListHolder(filtredList);
         page.setPageSize(pageable.getPageSize());
@@ -62,10 +63,10 @@ public class ProductController {
 
     @GetMapping("/api/products/search/name-contains")
     public Page<Product> namecontains(@RequestParam(value = "name") String name, Pageable pageable) {
-        //PageRequest paginacao = PageRequest.of(1, 10);
         List<Product> allProducts = mockService.getAllProducts();
-        List<Product> filtredList = allProducts.stream().filter(product -> product.getName().toUpperCase()
-                .contains(name.toUpperCase())).collect(Collectors.toList());
+        List<Product> filtredList = allProducts.stream().filter(product ->
+                (product.getName().toUpperCase().contains(name.toUpperCase()) || product.getDescription().toUpperCase()
+                .contains(name.toUpperCase()))).collect(Collectors.toList());
 
         PagedListHolder page = new PagedListHolder(filtredList);
         page.setPageSize(pageable.getPageSize());

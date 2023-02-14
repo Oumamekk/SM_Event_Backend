@@ -8,6 +8,7 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RestController;
 import java.util.List;
+import java.util.Objects;
 
 @CrossOrigin("http://localhost:4200")
 @RestController
@@ -18,7 +19,7 @@ public class CategoryController {
 
     @GetMapping("/api/product-categories/{id}")
     ProductCategory findOne(@PathVariable Long id) {
-        return mockService.getAllCategories().stream().filter(cat -> id == cat.getId()).findAny().get();
+        return mockService.getAllCategories().stream().filter(cat -> Objects.equals(id, cat.getId())).findAny().get();
     }
 
     @GetMapping("/api/product-categories")
